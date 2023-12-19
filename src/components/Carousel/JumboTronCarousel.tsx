@@ -72,9 +72,9 @@ const JumboTronCarousel = ({ images }: IJumboTronCarousel) => {
         <div className="absolute bottom-3 flex h-fit w-full justify-center space-x-3 max-md:bottom-1">
           {directElement}
         </div>
-        {images.map((image) => (
+        {images.map((image, index) => (
           <div
-            key={`banner-${image}`}
+            key={`banner-${image}-${index}`}
             style={{ transform: `translateX(-${slide * 100}%)` }}
             className=" h-80 min-w-full rounded-lg transition-transform duration-1000 max-md:h-24"
           >

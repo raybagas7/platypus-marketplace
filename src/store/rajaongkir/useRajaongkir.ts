@@ -30,7 +30,7 @@ const useRajaOngkirBase = create<State & Actions>((set) => ({
   },
   getCities: async (provinceCode: string) => {
     const { success, data, error } = await handleNextApiRequest<any>(
-      `/vm4/api/rajaongkircities?province=${provinceCode}`,
+      `/api/rajaongkircities?province=${provinceCode}`,
       "GET",
     );
 
@@ -44,7 +44,7 @@ const useRajaOngkirBase = create<State & Actions>((set) => ({
   },
   getProvince: async () => {
     const { success, data, error } = await handleNextApiRequest<any>(
-      "/vm4/api/rajaongkirprov",
+      "/api/rajaongkirprov",
       "GET",
     );
 
@@ -63,7 +63,7 @@ const useRajaOngkirBase = create<State & Actions>((set) => ({
       showLoading();
 
       const response = await fetch(
-        `/vm4/api/rajaongkircities?province=${provinceCode}`,
+        `/api/rajaongkircities?province=${provinceCode}`,
         {
           method: "GET",
           headers: {
@@ -88,7 +88,7 @@ const useRajaOngkirBase = create<State & Actions>((set) => ({
   },
   getProvinceEdit: async () => {
     try {
-      const response = await fetch("/vm4/api/rajaongkirprov", {
+      const response = await fetch("/api/rajaongkirprov", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

@@ -25,11 +25,6 @@ const nextConfig = {
       "ui-avatars.com",
     ],
   },
-  output: "standalone",
-  basePath: "/vm4",
-  experimental: {
-    esmExternals: false,
-  },
 };
 
 module.exports = nextConfig;

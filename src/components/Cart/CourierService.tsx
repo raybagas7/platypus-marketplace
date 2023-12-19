@@ -72,7 +72,7 @@ const CourierService = ({ groupedCart }: ICourierService) => {
   const onClickSelectService = async () => {
     showLoadingSm();
     const { success, data, error, code } = await handleNextApiRequest<any>(
-      `/vm4/api/rajaongkircost`,
+      `/api/rajaongkircost`,
       "POST",
       "",
       payloadRajaOngkirCost,

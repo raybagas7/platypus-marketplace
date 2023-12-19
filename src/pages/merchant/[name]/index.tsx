@@ -105,7 +105,7 @@ const Merchant = ({ merchant, products, pagination_info }: IMerchantProps) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="icon" href="/vm4/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
     );
   }
@@ -119,7 +119,7 @@ const Merchant = ({ merchant, products, pagination_info }: IMerchantProps) => {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="icon" href="/vm4/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="min-w-screen flex min-h-screen flex-col items-center pt-5">
         <p className="mt-3 w-full px-2 font-medium md:px-5">Merchants Deals</p>

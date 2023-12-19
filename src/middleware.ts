@@ -13,20 +13,20 @@ export async function middleware(request: NextRequest) {
     if (checkTokenExpired(refreshToken as string)) {
       return NextResponse.next();
     }
-    return NextResponse.redirect(new URL("/vm4", request.url));
+    return NextResponse.redirect(new URL("", request.url));
   }
 
   if (request.nextUrl.pathname.startsWith("/register")) {
     if (checkTokenExpired(refreshToken as string)) {
       return NextResponse.next();
     }
-    return NextResponse.redirect(new URL("/vm4", request.url));
+    return NextResponse.redirect(new URL("", request.url));
   }
 
   if (request.nextUrl.pathname.startsWith("/user")) {
     if (checkTokenExpired(refreshToken as string)) {
       const middlewareResponse = NextResponse.redirect(
-        new URL("/vm4/login", request.url),
+        new URL("/login", request.url),
       );
       middlewareResponse.cookies
         .delete({
@@ -46,7 +46,7 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/merchant-center")) {
     if (checkTokenExpired(refreshToken as string)) {
       const middlewareResponse = NextResponse.redirect(
-        new URL("/vm4/login", request.url),
+        new URL("/login", request.url),
       );
       middlewareResponse.cookies
         .delete({
@@ -66,7 +66,7 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/change-pin-platypay")) {
     if (checkTokenExpired(refreshToken as string)) {
       const middlewareResponse = NextResponse.redirect(
-        new URL("/vm4/login", request.url),
+        new URL("/login", request.url),
       );
       middlewareResponse.cookies
         .delete({
@@ -86,7 +86,7 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/change-password")) {
     if (checkTokenExpired(refreshToken as string)) {
       const middlewareResponse = NextResponse.redirect(
-        new URL("/vm4/login", request.url),
+        new URL("/login", request.url),
       );
       middlewareResponse.cookies
         .delete({
@@ -106,7 +106,7 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/cart")) {
     if (checkTokenExpired(refreshToken as string)) {
       const middlewareResponse = NextResponse.redirect(
-        new URL("/vm4/login", request.url),
+        new URL("/login", request.url),
       );
       middlewareResponse.cookies
         .delete({
@@ -126,7 +126,7 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/new-password")) {
     if (checkTokenExpired(refreshToken as string)) {
       const middlewareResponse = NextResponse.redirect(
-        new URL("/vm4/login", request.url),
+        new URL("/login", request.url),
       );
       middlewareResponse.cookies
         .delete({

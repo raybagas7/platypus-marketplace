@@ -7,11 +7,7 @@ interface Props {
 }
 
 const Providers = (props: Props) => {
-  return (
-    <SessionProvider baseUrl="/vm4/api/auth" basePath="/vm4/api/auth">
-      {props.children}
-    </SessionProvider>
-  );
+  return <SessionProvider>{props.children}</SessionProvider>;
 };
 
 export default Providers;
