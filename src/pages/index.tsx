@@ -158,7 +158,7 @@ const Home = ({ productsServer, category }: IHomeProps) => {
           </div>
           <div className="mb-10 mt-5 w-full">
             <HeaderLined className="mb-5">Recommended Products</HeaderLined>
-            <div className="xl:grid-cols-6-prod-card grid min-w-[348px] grid-cols-2-prod-card justify-evenly gap-2 gap-y-3 md:grid-cols-4-prod-card md:gap-y-10 md:py-10">
+            <div className="xl:grid-cols-6-prod-card grid min-w-[348px] grid-cols-2-prod-card justify-start gap-2 gap-y-3 md:gap-y-10 md:py-10 lg:grid-cols-4-prod-card">
               {products.length == 0 && (
                 <p className="md:px-1">No products to show.</p>
               )}

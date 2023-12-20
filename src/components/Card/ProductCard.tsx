@@ -27,15 +27,15 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }: ProductCardProps) => {
   return (
     <Link href={`/detail/${id}`}>
-      <Card className="w-full translate-y-0 rounded-lg border-none shadow-lg transition-transform duration-500 hover:-translate-y-2 hover:cursor-pointer hover:transition-transform hover:duration-100">
-        <CardHeader className="relative h-36 w-full rounded-tl-lg rounded-tr-lg bg-primary/20 md:h-40">
+      <Card className="w-full translate-y-0 rounded-lg border shadow transition duration-300 hover:-translate-y-1 hover:cursor-pointer hover:shadow-md hover:transition hover:duration-300">
+        <CardHeader className="relative h-44 w-full rounded-tl-lg rounded-tr-lg bg-primary/20 md:h-52">
           <Image
             src={url as string}
             loading="lazy"
             alt={name}
             height={300}
             width={300}
-            className="absolute left-0 top-0 h-36 w-full rounded-tl-lg rounded-tr-lg object-cover md:h-40"
+            className="absolute left-0 top-0 h-44 w-full rounded-tl-lg rounded-tr-lg object-cover md:h-52"
           />
           <div className="absolute bottom-0 left-0 flex h-6 w-14 items-center justify-between rounded-tr-lg bg-background p-2">
             <AiTwotoneStar className="w-3" />
@@ -44,7 +44,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         </CardHeader>
         <CardContent className="h-[130px] w-full flex-1 flex-col px-2 py-3 md:h-[120px]">
           <div className="flex h-full flex-col justify-between gap-y-2">
-            <div className="line-clamp-2 w-full">
+            <div className="line-clamp-2 w-full text-sm">
               <p>{name}</p>
             </div>
             <div>

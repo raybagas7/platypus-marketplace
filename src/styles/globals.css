@@ -96,3 +96,40 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply cursor-pointer bg-primary;
 }
+
+.hidden-cubi {
+  opacity: 0;
+  animation-name: slide_down_cubic;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.show-cubi {
+  animation-name: slide_up_cubic;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide_up_cubic {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_down_cubic {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+}

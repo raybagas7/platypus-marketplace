@@ -24,9 +24,9 @@ module.exports = {
         width: "width",
       },
       gridTemplateColumns: {
-        "2-prod-card": "repeat(auto-fit, 160px)",
-        "4-prod-card": "repeat(auto-fit, 190px)",
-        "6-prod-card": "repeat(auto-fit, 200px))",
+        "2-prod-card": "repeat(auto-fit, minmax(160px, 1fr))",
+        "4-prod-card": "repeat(4, minmax(190px, 1fr))",
+        "6-prod-card": "repeat(6, minmax(200px, 1fr))",
         "4-search-card": "repeat(auto-fit, 170px)",
         "6-search-card": "repeat(auto-fit, 180px)",
         "base-rec-card": "repeat(auto-fit, 150px)",

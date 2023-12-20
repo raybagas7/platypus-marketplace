@@ -13,9 +13,7 @@ const About: NextPageWithLayout = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen items-center justify-center pt-24 lg:pt-40">
-        <PlatypusBlangkon className="w-screen" />
-      </main>
+      <main className="flex min-h-screen items-center justify-center pt-24 lg:pt-40"></main>
     </>
   );
 };
