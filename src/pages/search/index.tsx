@@ -301,12 +301,96 @@ const Search = ({ products, pagination_info }: ISearchProps) => {
                   pageInformation={pageInformation}
                 />
               </div>
-              <div className="grid min-h-screen min-w-[348px] grid-cols-2-prod-card justify-evenly gap-2 gap-y-3 py-10 md:grid-cols-4-prod-card md:justify-center md:gap-4 md:gap-y-10">
+              <div className="md:grid-cols-5-search-card grid min-w-[348px] grid-cols-2-prod-card justify-start gap-2 gap-y-3 py-10 md:gap-4 md:gap-y-10">
                 {productsData.length == 0 && (
                   <div className="">
                     <p className="md:px-1">No products to show.</p>
                   </div>
                 )}
+                {productsData.map((item: IProduct) => {
+                  return (
+                    <ProductCard
+                      id={item.id}
+                      url={item.photo}
+                      key={item.id}
+                      name={item.title}
+                      price={parseInt(item.min_price)}
+                      rating={ratingFormat(item.average_rating)}
+                      city={item.city}
+                      sold={item.total_sold}
+                    />
+                  );
+                })}
+                {productsData.map((item: IProduct) => {
+                  return (
+                    <ProductCard
+                      id={item.id}
+                      url={item.photo}
+                      key={item.id}
+                      name={item.title}
+                      price={parseInt(item.min_price)}
+                      rating={ratingFormat(item.average_rating)}
+                      city={item.city}
+                      sold={item.total_sold}
+                    />
+                  );
+                })}
+                {productsData.map((item: IProduct) => {
+                  return (
+                    <ProductCard
+                      id={item.id}
+                      url={item.photo}
+                      key={item.id}
+                      name={item.title}
+                      price={parseInt(item.min_price)}
+                      rating={ratingFormat(item.average_rating)}
+                      city={item.city}
+                      sold={item.total_sold}
+                    />
+                  );
+                })}
+                {productsData.map((item: IProduct) => {
+                  return (
+                    <ProductCard
+                      id={item.id}
+                      url={item.photo}
+                      key={item.id}
+                      name={item.title}
+                      price={parseInt(item.min_price)}
+                      rating={ratingFormat(item.average_rating)}
+                      city={item.city}
+                      sold={item.total_sold}
+                    />
+                  );
+                })}
+                {productsData.map((item: IProduct) => {
+                  return (
+                    <ProductCard
+                      id={item.id}
+                      url={item.photo}
+                      key={item.id}
+                      name={item.title}
+                      price={parseInt(item.min_price)}
+                      rating={ratingFormat(item.average_rating)}
+                      city={item.city}
+                      sold={item.total_sold}
+                    />
+                  );
+                })}
+                {productsData.map((item: IProduct) => {
+                  return (
+                    <ProductCard
+                      id={item.id}
+                      url={item.photo}
+                      key={item.id}
+                      name={item.title}
+                      price={parseInt(item.min_price)}
+                      rating={ratingFormat(item.average_rating)}
+                      city={item.city}
+                      sold={item.total_sold}
+                    />
+                  );
+                })}
                 {productsData.map((item: IProduct) => {
                   return (
                     <ProductCard

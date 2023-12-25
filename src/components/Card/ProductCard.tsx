@@ -26,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   id,
 }: ProductCardProps) => {
   return (
-    <Link href={`/detail/${id}`}>
+    <Link href={`/detail/${id}`} className="h-fit">
       <Card className="w-full translate-y-0 rounded-lg border shadow transition duration-300 hover:-translate-y-1 hover:cursor-pointer hover:shadow-md hover:transition hover:duration-300">
         <CardHeader className="relative h-44 w-full rounded-tl-lg rounded-tr-lg bg-primary/20 md:h-52">
           <Image
