@@ -25,7 +25,7 @@ const ProductDetailRecommendation = () => {
     );
   }
   return (
-    <div className="grid grid-cols-base-rec-card justify-between gap-2 gap-y-3 md:grid-cols-md-rec-card md:gap-y-10 md:py-10 xl:grid-cols-xl-rec-card">
+    <div className="grid min-w-[348px] grid-cols-2-prod-card justify-start gap-2 gap-y-3 md:gap-y-10 md:py-10 lg:grid-cols-4-prod-card xl:grid-cols-6-prod-card">
       {merchantProducts.map((product: IProductMerchantRecommendation) => {
         return (
           <ProductCard
