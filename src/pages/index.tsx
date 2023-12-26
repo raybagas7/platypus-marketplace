@@ -142,7 +142,7 @@ const Home = ({ productsServer, category }: IHomeProps) => {
           </div>
           <div className="mb-10 mt-5 w-full">
             <HeaderLined className="mb-5">Product Categories</HeaderLined>
-            <div className="grid grid-cols-3 gap-2 gap-y-3 p-5 shadow-lg md:grid-cols-5 md:gap-y-10 md:p-10 xl:grid-cols-7">
+            <div className="grid grid-cols-3 gap-2 gap-y-3 rounded-lg p-5 shadow-md md:grid-cols-5 md:gap-y-10 md:p-10 xl:grid-cols-7">
               <CategoryIcon label="See All" id="" />
               {categories.map((item: ICategory) => {
                 return (
@@ -158,7 +158,7 @@ const Home = ({ productsServer, category }: IHomeProps) => {
           </div>
           <div className="mb-10 mt-5 w-full">
             <HeaderLined className="mb-5">Recommended Products</HeaderLined>
-            <div className="xl:grid-cols-6-prod-card grid min-w-[348px] grid-cols-2-prod-card justify-start gap-2 gap-y-3 md:gap-y-10 md:py-10 lg:grid-cols-4-prod-card">
+            <div className="grid min-w-[348px] grid-cols-2-prod-card justify-start gap-2 gap-y-3 md:gap-y-10 md:py-10 lg:grid-cols-4-prod-card xl:grid-cols-6-prod-card">
               {products.length == 0 && (
                 <p className="md:px-1">No products to show.</p>
               )}

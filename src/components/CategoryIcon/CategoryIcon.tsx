@@ -39,7 +39,7 @@ const CategoryIcon: React.FC<CategoryIconProps> = ({
           width={150}
           className={`${
             !icon && "object-contain p-5"
-          } md:w[5rem] hover:shadow-3xl flex h-16 w-16 translate-y-0 items-center justify-center rounded-sm bg-primary/20 text-white/40 shadow-lg transition-transform duration-700 hover:-translate-y-2 hover:cursor-pointer hover:transition-transform hover:duration-100 md:h-[5rem] md:w-[5rem]`}
+          } md:w[5rem] flex h-16 w-16 translate-y-0 items-center justify-center rounded-sm bg-primary/20 text-white/40 shadow-md transition duration-300 hover:-translate-y-1 hover:cursor-pointer hover:shadow-lg hover:transition-transform hover:duration-300 md:h-[5rem] md:w-[5rem]`}
         />
       </Link>
       <p className="text-center text-sm md:text-base">{label}</p>

@@ -1,20 +1,9 @@
 import LoginForm from "@/components/Form/LoginForm";
 import PlatypusHead from "@/components/SVG/PlatypusHead";
-import { GetServerSideProps } from "next";
-import { BuiltInProviderType } from "next-auth/providers/index";
-import {
-  ClientSafeProvider,
-  LiteralUnion,
-  getProviders,
-} from "next-auth/react";
 import Head from "next/head";
 import React from "react";
 
-interface IGoogleEntryProvider {
-  providers: Record<LiteralUnion<BuiltInProviderType>, ClientSafeProvider>;
-}
-
-const Login = ({ providers }: IGoogleEntryProvider) => {
+const Login = () => {
   return (
     <>
       <Head>
@@ -31,7 +20,7 @@ const Login = ({ providers }: IGoogleEntryProvider) => {
               Login
             </h1>
           </div>
-          <LoginForm providers={providers} />
+          <LoginForm />
         </div>
       </main>
     </>
@@ -39,11 +28,3 @@ const Login = ({ providers }: IGoogleEntryProvider) => {
 };
 
 export default Login;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    props: {
-      providers: await getProviders(),
-    },
-  };
-};

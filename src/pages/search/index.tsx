@@ -301,7 +301,7 @@ const Search = ({ products, pagination_info }: ISearchProps) => {
                   pageInformation={pageInformation}
                 />
               </div>
-              <div className="md:grid-cols-5-search-card grid min-w-[348px] grid-cols-2-prod-card justify-start gap-2 gap-y-3 py-10 md:gap-4 md:gap-y-10">
+              <div className="grid min-w-[348px] grid-cols-2-prod-card justify-start gap-2 gap-y-3 py-10 md:gap-4 md:gap-y-10 lg:grid-cols-4-prod-card xl:grid-cols-6-prod-card">
                 {productsData.length == 0 && (
                   <div className="">
                     <p className="md:px-1">No products to show.</p>

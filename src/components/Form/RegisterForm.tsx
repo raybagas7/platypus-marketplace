@@ -14,9 +14,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import GoogleEntryButton from "../GoogleAuth/GoogleEntryButton";
-import { ClientSafeProvider, LiteralUnion } from "next-auth/react";
-import { BuiltInProviderType } from "next-auth/providers/index";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { format } from "date-fns";
@@ -34,10 +31,6 @@ import ButtonWithLoading from "../Button/ButtonWithLoading";
 import { useLoading } from "@/store/loading/useLoading";
 import { InputPrimeIcon } from "../Input/InputPrimeIcon";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-
-interface IGoogleEntryProvider {
-  providers: Record<LiteralUnion<BuiltInProviderType>, ClientSafeProvider>;
-}
 
 const registerFormSchema = z
   .object({
@@ -95,7 +88,7 @@ const registerFormSchema = z
     path: ["password"],
   });
 
-const RegisterForm = ({ providers }: IGoogleEntryProvider) => {
+const RegisterForm = () => {
   const [slide, setSlide] = useState<number>(0);
   const { toast } = useToast();
   const [showPasswod, setShowPassword] = useState<boolean>(false);
@@ -163,7 +156,7 @@ const RegisterForm = ({ providers }: IGoogleEntryProvider) => {
       <p className="text-center text-2xl font-bold text-primary">Platypus</p>
       <div className="flex flex-col justify-center gap-1 text-center text-xs lg:flex-row lg:text-base">
         <p className="hidden lg:block">
-          Ayo typus, you have an account already?{" "}
+          Ayo platy, you have an account already?{" "}
         </p>
         <Link
           href={"/login"}
@@ -172,13 +165,7 @@ const RegisterForm = ({ providers }: IGoogleEntryProvider) => {
           Login Here
         </Link>
       </div>
-      <div className="py-6">
-        <GoogleEntryButton providers={providers} />
-      </div>
-      <HeaderLined className="text-sm lg:text-base">
-        Or Register with
-      </HeaderLined>
-
+      <HeaderLined className="text-sm lg:text-base">Register</HeaderLined>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit, handlerSlideToPrevForm)}
