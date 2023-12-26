@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
 import UserLayout from "@/components/Layout/UserLayout";
-import PlatypusBlangkon from "@/components/SVG/PlatypusBlangkon";
 import Head from "next/head";
 
 const About: NextPageWithLayout = () => {

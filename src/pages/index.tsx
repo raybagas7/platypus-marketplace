@@ -133,10 +133,10 @@ const Home = ({ productsServer, category }: IHomeProps) => {
             <HeaderLined className="mb-5">Deals</HeaderLined>
             <JumboTronCarousel
               images={[
-                "https://images.tokopedia.net/img/cache/1208/NsjrJu/2023/11/6/a0953aa5-6054-4bea-8b65-bd1d753a013a.jpg.webp?ect=4g",
-                "https://images.tokopedia.net/img/cache/1200/NXCtjv/2023/11/14/24249245-f0be-4b97-a8b4-a819f971979d.jpg",
-                "https://images.tokopedia.net/img/cache/1208/NsjrJu/2023/11/14/b5ca3ba8-acf9-43ab-b158-b7f74dc254a0.jpg.webp?ect=4g",
-                "https://images.tokopedia.net/img/cache/1208/NsjrJu/2023/11/14/b5ca3ba8-acf9-43ab-b158-b7f74dc254a0.jpg.webp?ect=4g",
+                "/banner/banner4.webp",
+                "/banner/banner3.webp",
+                "/banner/banner2.webp",
+                "/banner/banner1.webp",
               ]}
             />
           </div>
