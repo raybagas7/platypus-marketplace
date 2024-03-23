@@ -123,7 +123,7 @@ const RegisterForm = () => {
     const formattedDate = formatDate(String(values.date_of_birth));
     const payloadRegister = {
       ...values,
-      phone_number: `+62${values.phone_number}`,
+      phone_nmoumber: `+62${values.phone_number}`,
       date_of_birth: String(formattedDate),
     };
 
