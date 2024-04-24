@@ -68,6 +68,7 @@ const useUserBase = create<State & Actions>((set) => ({
       const { error, data, message } = await service.getWalletData();
 
       if (error) {
+        console.error(message);
       } else {
         set(() => ({ walletData: data.data }));
       }

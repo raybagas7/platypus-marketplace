@@ -23,8 +23,6 @@ interface IProductDetailsPage {
 }
 
 const ProductDetails = ({ productData }: IProductDetailsPage) => {
-  console.log(productData);
-
   const userData = useUser.use.userData();
   const navHeight = useNavBar.use.navHeight();
   const { setProductDetail, getFavoriteStatus, getProductRecommendation } =

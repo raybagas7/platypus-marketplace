@@ -153,7 +153,7 @@ const ProductDetailManage = () => {
       <div className="space-y-3">
         <ButtonWithLoading
           disabled={
-            isNaN(itemAmount) || variantType === "parent"
+            isNaN(itemAmount) || variantType === "parent" || !userData
               ? variants[choosenParent].stock === undefined
               : childVariants![choosenParent].variant_child[chosenChild]
                   .stock === undefined

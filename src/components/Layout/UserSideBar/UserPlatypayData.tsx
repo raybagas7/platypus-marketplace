@@ -1,7 +1,7 @@
 import { useUser } from "@/store/user/useUser";
 import { formatIDR } from "@/utils/formatIDR";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { IoWallet } from "react-icons/io5";
 
 interface IUserPlatypayData {
@@ -29,6 +29,7 @@ const UserPlatypayData = ({ small }: IUserPlatypayData) => {
       </div>
     );
   }
+
   return (
     <div
       className={`${

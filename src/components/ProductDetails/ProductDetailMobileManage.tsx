@@ -8,8 +8,10 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import service from "@/services/services";
 import { useLoading } from "@/store/loading/useLoading";
 import { toast } from "../ui/use-toast";
+import { useUser } from "@/store/user/useUser";
 
 const ProductDetailMobileManage = () => {
+  const userData = useUser.use.userData();
   const itemAmount = useAmount.use.itemAmount();
   const variants = useProdDetail.use.parentVariants();
   const isFavorite = useProdDetail.use.isFavorite();
@@ -40,7 +42,7 @@ const ProductDetailMobileManage = () => {
   return (
     <div className="fixed inset-x-0 bottom-0 z-[100] flex h-14 w-full items-center justify-center gap-3 overflow-y-scroll border-t-[1px] bg-background px-3 shadow-drop-line lg:hidden">
       <ButtonWithLoading
-        disabled={isNaN(itemAmount)}
+        disabled={isNaN(itemAmount) || !userData}
         buttonContent={
           <div className="flex items-center gap-1">
             <IoCartOutline />
@@ -52,6 +54,7 @@ const ProductDetailMobileManage = () => {
         loadingContent="Adding to cart..."
       ></ButtonWithLoading>
       <ButtonWithLoading
+        disabled={!userData}
         onClick={() => {
           isFavorite ? dislikeProduct() : likeProduct();
         }}

@@ -20,6 +20,7 @@ const UserCard = () => {
     deleteCookie("refreshToken", { path: "/" });
     router.push("/login");
   };
+
   return (
     <div className="space-y-5">
       <Link
