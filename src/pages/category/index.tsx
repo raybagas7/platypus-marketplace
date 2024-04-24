@@ -39,7 +39,6 @@ const Category = ({ category }: ICategoryProps) => {
               >
                 Categories
               </Link>
-              <GrFormNextLink />
             </div>
             <div className="mb-5 items-center md:flex md:w-full md:justify-between">
               <hr className="invisible flex-1 md:visible" />

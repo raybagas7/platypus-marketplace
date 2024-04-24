@@ -299,14 +299,16 @@ const Search = ({ products, paramQuery, pagination_info }: ISearchProps) => {
               </div>
 
               <div className="mt-5 flex justify-center">
-                <UniPagination
-                  onClickChangePage={onClickChangePage}
-                  onClickNextChangePage={onClickNextChangePage}
-                  onClickPrevChangePage={onClickPrevChangePage}
-                  pageInformation={pageInformation}
-                />
+                {productsData.length == 0 ? null : (
+                  <UniPagination
+                    onClickChangePage={onClickChangePage}
+                    onClickNextChangePage={onClickNextChangePage}
+                    onClickPrevChangePage={onClickPrevChangePage}
+                    pageInformation={pageInformation}
+                  />
+                )}
               </div>
-              <div className="grid min-h-screen min-w-[348px] grid-cols-2-prod-card justify-evenly gap-2 gap-y-3 py-10 md:grid-cols-4-prod-card md:justify-center md:gap-4 md:gap-y-10">
+              <div className="grid min-w-[348px] grid-cols-2-prod-card justify-evenly gap-2 gap-y-3 py-10 md:grid-cols-4-prod-card md:justify-center md:gap-4 md:gap-y-10">
                 {productsData.length == 0 && (
                   <div className="">
                     <p className="md:px-1">No products to show.</p>
@@ -328,12 +330,14 @@ const Search = ({ products, paramQuery, pagination_info }: ISearchProps) => {
                 })}
               </div>
               <div className="mt-5 flex justify-center">
-                <UniPagination
-                  onClickChangePage={onClickChangePage}
-                  onClickNextChangePage={onClickNextChangePage}
-                  onClickPrevChangePage={onClickPrevChangePage}
-                  pageInformation={pageInformation}
-                />
+                {productsData.length == 0 ? null : (
+                  <UniPagination
+                    onClickChangePage={onClickChangePage}
+                    onClickNextChangePage={onClickNextChangePage}
+                    onClickPrevChangePage={onClickPrevChangePage}
+                    pageInformation={pageInformation}
+                  />
+                )}
               </div>
             </div>
           </div>
